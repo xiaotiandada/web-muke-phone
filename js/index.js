@@ -86,8 +86,6 @@ var plasyScreenAnimateDone = function(screenCls){
     }
 }
 
-
-
 window.onload = function(){
   console.log('onload');
   for(var k in screenAnimateElements){
@@ -119,7 +117,8 @@ var switchNavItemsActive = function(idx){
 }
 switchNavItemsActive(0);
 window.onscroll = function(){
-  var top = document.body.scrollTop /*|| document.document.scrollTop*/;
+  // var top = document.body.scrollTop /*|| document.document.scrollTop*/;
+  var top = document.body.scrollTop || document.documentElement.scrollTop;
   var HeaderElem = getElem('.header');
   var OutlineElem = getElem('.outline');
   console.log(top);
@@ -149,6 +148,9 @@ window.onscroll = function(){
     switchNavItemsActive(3);
   }
    if (top > 800*4 -100){
+    plasyScreenAnimateDone('.screen-5');
+    switchNavItemsActive(4);
+  }else if(top >= 2657){
     plasyScreenAnimateDone('.screen-5');
     switchNavItemsActive(4);
   }

@@ -394,6 +394,7 @@ BEM 设计模式
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color=#000000); /*IE 5.5-7*/
 
 	background-color: #ad0505;
+	transform: translate(0,-20%);
 }
 .footer{
 	height: 80px;
